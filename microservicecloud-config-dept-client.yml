@@ -21,10 +21,9 @@ spring:
       max-total: 5
       max-wait-millis: 200 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.atguigu.springcloud.entities
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml
+  configuration:
+    #开启mybatis的驼峰命名
+    map-underscore-to-camel-case: true
  
 eureka: 
   client: #客户端注册进eureka服务列表内
