@@ -59,10 +59,9 @@ spring:
   
   
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.youyuan.bean
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml
+  configuration:
+    #开启mybatis的驼峰命名
+    map-underscore-to-camel-case: true
  
 eureka: 
   client: #客户端注册进eureka服务列表内
